@@ -1,0 +1,537 @@
+:root {
+  --rosa-claro: #ffd6e7;
+  --rosa-medio: #ffa8c8;
+  --rosa-fuerte: #ff7bac;
+  --vino: #8a2c45;
+  --texto-oscuro: #3d1e2a;
+  --blanco: #ffffff;
+  --sombra: rgba(61, 30, 42, 0.2);
+  --whatsapp: #25d366;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--rosa-claro);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(to right, var(--rosa-medio), var(--rosa-fuerte));
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 8px solid var(--vino);
+  box-shadow: 0 5px 15px var(--sombra);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  color: var(--vino);
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0 var(--sombra);
+  position: relative;
+  z-index: 2;
+}
+
+.nombre {
+  font-size: 2rem;
+  color: var(--blanco);
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+.corazon {
+  color: var(--vino);
+  font-size: 1.5rem;
+  margin: 0 10px;
+  animation: latido 1.5s infinite;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes latido {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Personaje con mensaje */
+.seccion-personaje {
+  padding: 40px 0;
+  background-color: var(--rosa-claro);
+  text-align: center;
+}
+
+.contenedor-personaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--blanco);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px var(--sombra);
+  position: relative;
+  border: 3px solid var(--rosa-fuerte);
+}
+
+.personaje {
+  width: 120px;
+  height: 120px;
+  background-color: var(--vino);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 8px 15px rgba(138, 44, 69, 0.3);
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.personaje::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--blanco);
+  border-radius: 50%;
+  top: 30px;
+  left: 25px;
+  opacity: 0.7;
+}
+
+.personaje::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--blanco);
+  border-radius: 50%;
+  top: 30px;
+  right: 25px;
+  opacity: 0.7;
+}
+
+.mensaje-personaje {
+  font-size: 1.4rem;
+  color: var(--vino);
+  font-weight: 600;
+  text-align: center;
+  padding: 15px 25px;
+  background-color: var(--rosa-claro);
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 10px var(--sombra);
+  border-left: 5px solid var(--vino);
+}
+
+.mensaje-personaje::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 15px 15px 15px;
+  border-style: solid;
+  border-color: transparent transparent var(--rosa-claro) transparent;
+}
+
+/* Carrusel */
+.seccion-carrusel {
+  padding: 40px 0;
+  background-color: var(--blanco);
+}
+
+.carrusel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px var(--sombra);
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 500px;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.controles-carrusel {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.btn-carrusel {
+  background-color: var(--rosa-fuerte);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+.btn-carrusel:hover {
+  background-color: var(--vino);
+  transform: translateY(-5px);
+}
+
+.indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.indicador {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--rosa-medio);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicador.activo {
+  background-color: var(--vino);
+  transform: scale(1.3);
+}
+
+/* Mensaje */
+.seccion-mensaje {
+  padding: 60px 0;
+  background-color: var(--rosa-claro);
+}
+
+.contenedor-mensaje {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mensaje-texto {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px var(--sombra);
+  position: relative;
+  border-left: 8px solid var(--vino);
+}
+
+.mensaje-texto::before {
+  content: "❝";
+  font-size: 4rem;
+  color: var(--rosa-fuerte);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+/* Video karaoke */
+.seccion-video {
+  padding: 40px 0;
+  background-color: var(--blanco);
+}
+
+.contenedor-video {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-video {
+  color: var(--vino);
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-video::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--rosa-medio), var(--vino));
+  border-radius: 2px;
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px var(--sombra);
+  background-color: #000;
+}
+
+.video-karaoke {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.overlay-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(138, 44, 69, 0.1),
+    rgba(138, 44, 69, 0.3)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover .overlay-video {
+  opacity: 1;
+}
+
+.icono-play {
+  font-size: 4rem;
+  color: var(--blanco);
+  background-color: rgba(138, 44, 69, 0.7);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* WhatsApp */
+.seccion-whatsapp {
+  padding: 40px 0;
+  background-color: var(--rosa-claro);
+}
+
+.contenedor-whatsapp {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--blanco);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px var(--sombra);
+}
+
+.texto-whatsapp {
+  font-size: 1.4rem;
+  color: var(--vino);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: var(--whatsapp);
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 18px 35px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(37, 211, 102, 0.4);
+  background-color: #1da851;
+}
+
+.btn-whatsapp i {
+  font-size: 1.8rem;
+}
+
+/* Pie de página */
+footer {
+  background-color: var(--vino);
+  color: var(--blanco);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.dedicatoria {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .titulo-principal {
+    font-size: 2.8rem;
+  }
+
+  .nombre {
+    font-size: 1.6rem;
+  }
+
+  .carrusel {
+    height: 400px;
+  }
+
+  .video-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 2.2rem;
+  }
+
+  .nombre {
+    font-size: 1.3rem;
+  }
+
+  .carrusel {
+    height: 300px;
+  }
+
+  .mensaje-texto {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .personaje {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mensaje-personaje {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  .texto-whatsapp {
+    font-size: 1.2rem;
+  }
+
+  .btn-whatsapp {
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  .nombre {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .carrusel {
+    height: 250px;
+  }
+
+  .btn-carrusel {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .contenedor-personaje {
+    padding: 20px;
+  }
+
+  .personaje {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mensaje-personaje {
+    font-size: 1rem;
+  }
+
+  .titulo-video {
+    font-size: 1.8rem;
+  }
+
+  .btn-whatsapp {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que no puedo decirte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor">
+            <h1 class="titulo-principal">Lo que no puedo decirte</h1>
+            <h2 class="nombre">
+                <i class="fas fa-heart corazon"></i>
+                Nadia Lisseth Pineda Chávez
+                <i class="fas fa-heart corazon"></i>
+            </h2>
+        </div>
+    </header>
+
+    <!-- Personaje con mensaje -->
+    <section class="seccion-personaje">
+        <div class="contenedor">
+            <div class="contenedor-personaje">
+                <div class="personaje"></div>
+                <div class="mensaje-personaje">Espero que puedas verlo sola</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <section class="seccion-carrusel">
+        <div class="contenedor">
+            <div class="carrusel-container">
+                <div class="carrusel" id="carrusel">
+                    <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+            
+            <div class="controles-carrusel">
+                <button class="btn-carrusel" id="btnAnterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="btn-carrusel" id="btnSiguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="indicadores" id="indicadores">
+                <!-- Los indicadores se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensaje -->
+    <section class="seccion-mensaje">
+        <div class="contenedor">
+            <div class="contenedor-mensaje">
+                <div class="mensaje-texto">
+                    Por si no te vuelvo a ver, quiero decirte que causaste algo en mí que no sentí desde hace mucho tiempo. Lo anterior, porque no sé si seguiré trabajando acá, a lo mejor sí o a lo mejor no, eso dependerá de lo que Dios tiene preparado. Pero, si ya no estoy acá, espero encontrarte algún día.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video karaoke -->
+    <section class="seccion-video">
+        <div class="contenedor">
+            <div class="contenedor-video">
+                <h2 class="titulo-video">Canción para ti</h2>
+                <div class="video-wrapper">
+                    <video class="video-karaoke" id="videoKaraoke" controls poster="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <!-- El video se cargará dinámicamente con JavaScript -->
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div class="overlay-video">
+                        <div class="icono-play" id="playVideo">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp -->
+    <section class="seccion-whatsapp">
+        <div class="contenedor">
+            <div class="contenedor-whatsapp">
+                <p class="texto-whatsapp">
+                    Por si quieres tener contacto conmigo:
+                </p>
+                <a href="https://wa.me/50376013497?text=Hola,%20qué%20tal?" class="btn-whatsapp" target="_blank" id="whatsappBtn">
+                    <i class="fab fa-whatsapp"></i> Envíame un mensaje por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="contenedor">
+            <p>Hecho con <i class="fas fa-heart" style="color: #ff7bac;"></i> para Nadia</p>
+            <p class="dedicatoria">Para esa persona especial que llega a tu vida y deja una huella imborrable.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
